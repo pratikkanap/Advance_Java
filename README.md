@@ -1,23 +1,166 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration>
-<hibernate-configuration
-    xmlns="http://www.hibernate.org/xsd/orm/cfg"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.hibernate.org/xsd/orm/cfg hibernate-configuration-4.0.xsd">
-  <session-factory>
-    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-    <property name="connection.url">jdbc:mysql://192.168.10.117/dac31?useSSL=false</property>
-    <property name="connection.username">dac31</property>
-    <property name="connection.password">welcome</property>
-    <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
-    <property name="connection.pool_size">3</property>
-    <property name="show_sql">true</property>
-    <property name="format_sql">true</property>
-    <property name="hbm2ddl.auto">update</property>
-    <!-- mapping class" / -->
-   <!--  <mapping class="com.demo.beans.Department"/>-->
-    <!--  <mapping class="com.demo.model.Product"/> 
-    <mapping class="com.demo.model.MyUser"/> --> 
-<mapping resource="MyUser.hbm.xml"/>
-  </session-factory>
-</hibernate-configuration>
+Welcome to the Advanced Java reference guide. This document covers the core concepts required during CDAC for building scalable, secure, and enterprise-level Java applications.
+
+🚀 Overview
+
+Advanced Java builds on Core Java and focuses on:
+
+Enterprise Development
+
+Web Applications
+
+Middleware
+
+Database & ORM
+
+Frameworks & Architecture
+
+This README consolidates the essential topics, explanations, and mini examples.
+
+🧩 Key Modules
+1️⃣ Servlets
+
+Server-side Java components
+
+Handle HTTP requests and responses
+
+Lifecycle Methods:
+
+init()
+
+service()
+
+destroy()
+
+Key Features:
+
+Request Handling
+
+Session Tracking
+
+Cookies
+
+2️⃣ JSP (Java Server Pages)
+
+Easier dynamic page development
+
+Mix HTML + Java
+
+Lifecycle: Translation → Compilation → Execution
+
+Tags:
+
+Directive Tags (<%@ %>)
+
+Scriptlets (<% %>)
+
+Expression Language (${ })
+
+3️⃣ JDBC (Database Connectivity)
+
+Connect Java apps with databases
+
+Steps:
+
+Load Driver
+
+Establish Connection
+
+Create Statement
+
+Execute Query
+
+Close Connection
+
+API Components:
+
+Connection
+
+Statement
+
+PreparedStatement
+
+ResultSet
+
+4️⃣ Hibernate (ORM)
+
+Object Relational Mapping
+
+Reduces SQL dependency
+
+Maps objects to DB tables
+
+Important Concepts:
+
+Configuration & SessionFactory
+
+HQL (Hibernate Query Language)
+
+Caching
+
+Annotations (@Entity, @Id, @Table)
+
+5️⃣ Spring Framework
+
+Lightweight & modular
+
+Supports dependency injection (DI)
+
+MVC for web applications
+
+REST API development
+
+Important:
+
+IoC Container
+
+Bean Scopes (singleton, prototype)
+
+Annotations (@Controller, @Service, @Repository)
+
+6️⃣ Spring Boot
+
+Simplifies Spring configuration
+
+Embedded servers (Tomcat)
+
+REST APIs
+
+Microservices ready
+
+Advantages:
+
+Auto Configuration
+
+Starter Dependencies
+
+Production-Ready
+
+🛢️ Database (MySQL/PostgreSQL)
+
+CRUD operations
+
+Stored procedures
+
+Joins & indexing
+
+ORM mappings
+
+🌐 HTTP & Web Concepts
+
+HTTP Methods: GET, POST, PUT, DELETE
+
+Status Codes: 200, 404, 500
+
+RESTful Services:
+
+Stateless communication
+
+JSON/XML support
+
+🔐 Security Concepts
+
+Authentication vs Authorization
+
+HTTPS & SSL Certificates
+
+JWT Tokens (Spring Boot)
